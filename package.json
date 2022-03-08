@@ -1,6 +1,6 @@
 {
 	"name": "sfdx-notifications",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"author": "Ziemniakoss",
 	"bugs": "https://github.com/Ziemniakoss/sfdx-notifications/issues",
 	"dependencies": {
