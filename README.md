@@ -15,16 +15,19 @@ sfdx plugins:install sfdx-notifications
 ### Managing notifications
 
 You can register notifications for command by using
+
 ```
 sfdx notificaitons:register
 ```
 
 If you want to stop receiving notifications for command, use
+
 ```
 sfdx notifications:inregister
 ```
 
 To list registered notifications, use
+
 ```
 sfdx notifications:list
 ```
