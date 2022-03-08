@@ -1,0 +1,62 @@
+{
+	"name": "sfdx-notifications",
+	"version": "0.0.0",
+	"author": "Ziemniakoss",
+	"bugs": "https://github.com/Ziemniakoss/sfdx-notifications/issues",
+	"dependencies": {
+		"@oclif/command": "^1",
+		"@oclif/config": "^1",
+		"@oclif/errors": "^1",
+		"@salesforce/command": "^3",
+		"@salesforce/core": "^2",
+		"node-notifier": "^10.0.1",
+		"tslib": "^2"
+	},
+	"devDependencies": {
+		"@oclif/dev-cli": "^1",
+		"@oclif/plugin-help": "^3",
+		"@salesforce/dev-config": "^2",
+		"@salesforce/dev-scripts": "^0",
+		"prettier": "^2",
+		"ts-node": "^10",
+		"typescript": "4"
+	},
+	"engines": {
+		"node": ">=12.0.0"
+	},
+	"files": [
+		"/lib",
+		"/messages",
+		"/npm-shrinkwrap.json",
+		"/oclif.manifest.json"
+	],
+	"homepage": "https://github.com/Ziemniakoss/sfdx-notifications",
+	"keywords": [
+		"sfdx-plugin",
+		"notifications",
+		"unofficial"
+	],
+	"license": "MIT",
+	"oclif": {
+		"commands": "./lib/commands",
+		"bin": "sfdx",
+		"topics": {
+			"notifications": {
+				"description": "Manage sfdx notifications"
+			}
+		},
+		"hooks": {
+			"postrun": "./lib/hooks/postrun.ts"
+		},
+		"devPlugins": [
+			"@oclif/plugin-help"
+		]
+	},
+	"repository": "Ziemniakoss/sfdx-notifications",
+	"scripts": {
+		"build": "tsc -p .",
+		"postpack": "rm -f oclif.manifest.json",
+		"prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
+		"version": "oclif-dev readme && git add README.md"
+	}
+}

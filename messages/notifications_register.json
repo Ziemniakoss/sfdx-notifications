@@ -1,0 +1,7 @@
+{
+	"description": "Register notifications for command",
+	"prompt_commandName": "What command should emmit notifications (for example plugins:list)",
+	"prompt_title": "Notification title",
+	"prompt_message": "Notification message",
+	"prompt_icon": "Full path to notification icon(optional)"
+}

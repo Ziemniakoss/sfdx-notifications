@@ -1,0 +1,7 @@
+{
+	"description": "List subscribed commands",
+	"column_commandName": "Command Name",
+	"column_title": "Title",
+	"column_message": "Message",
+	"column_icon": "Icon"
+}

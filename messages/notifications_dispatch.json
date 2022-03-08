@@ -1,0 +1,6 @@
+{
+	"description": "Dispatch test notification",
+	"title": "Notification title",
+	"message": "Notification message",
+	"console_message": "Dispatching test notification"
+}

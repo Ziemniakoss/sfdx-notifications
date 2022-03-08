@@ -1,0 +1,4 @@
+{
+	"default_title": "SFDX: Done!",
+	"default_message": "Command {{commandName}} finished execution"
+}
