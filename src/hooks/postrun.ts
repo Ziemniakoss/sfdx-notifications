@@ -29,6 +29,9 @@ async function hook(options) {
 		title,
 		message,
 		icon,
+		appID: "SFDX",
+		label: "SFDX",
+		"app-name": "SFDX"
 	};
 	notify(notification);
 }

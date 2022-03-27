@@ -1,6 +1,6 @@
 import { SfdxCommand } from "@salesforce/command";
 import { Messages } from "@salesforce/core";
-import { notify } from "node-notifier";
+import { notify, } from "node-notifier";
 
 Messages.importMessagesDirectory(__dirname);
 
@@ -17,6 +17,9 @@ export default class GenerateSObjectTypings extends SfdxCommand {
 		const notificaton = {
 			title: messages.getMessage("title"),
 			message: messages.getMessage("message"),
+			appID: "SFDX",
+			label: "SFDX",
+			"app-name": "SFDX"
 		};
 		notify(notificaton);
 		return notificaton;
