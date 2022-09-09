@@ -1,6 +1,5 @@
 import { SfdxCommand } from "@salesforce/command";
 import { Messages } from "@salesforce/core";
-import { notify, } from "node-notifier";
 
 Messages.importMessagesDirectory(__dirname);
 
@@ -14,14 +13,15 @@ export default class GenerateSObjectTypings extends SfdxCommand {
 
 	public async run(): Promise<unknown> {
 		this.ux.log(messages.getMessage("console_message"));
-		const notificaton = {
+		const notification = {
 			title: messages.getMessage("title"),
 			message: messages.getMessage("message"),
 			appID: "SFDX",
 			label: "SFDX",
 			"app-name": "SFDX"
 		};
-		notify(notificaton);
-		return notificaton;
+		return this.config.runHook("notification", { notification })
+			.catch(error => this.ux.error(`Error occurred while dispatching notification ${error}`))
+			.finally(() => notification);
 	}
 }
