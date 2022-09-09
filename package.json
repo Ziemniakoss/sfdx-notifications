@@ -46,7 +46,8 @@
 			}
 		},
 		"hooks": {
-			"postrun": "./lib/hooks/postrun.js"
+			"postrun": "./lib/hooks/postrun.js",
+			"notification": "./lib/hooks/notification.js"
 		},
 		"devPlugins": [
 			"@oclif/plugin-help"
