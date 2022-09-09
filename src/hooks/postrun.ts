@@ -31,7 +31,7 @@ async function hook(options) {
 		icon,
 		appID: "SFDX",
 		label: "SFDX",
-		"app-name": "SFDX"
+		"app-name": "SFDX",
 	};
 	notify(notification);
 }

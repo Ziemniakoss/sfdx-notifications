@@ -18,10 +18,13 @@ export default class GenerateSObjectTypings extends SfdxCommand {
 			message: messages.getMessage("message"),
 			appID: "SFDX",
 			label: "SFDX",
-			"app-name": "SFDX"
+			"app-name": "SFDX",
 		};
-		return this.config.runHook("notification", { notification })
-			.catch(error => this.ux.error(`Error occurred while dispatching notification ${error}`))
+		return this.config
+			.runHook("notification", { notification })
+			.catch((error) =>
+				this.ux.error(`Error occurred while dispatching notification ${error}`)
+			)
 			.finally(() => notification);
 	}
 }
