@@ -16,8 +16,8 @@ export default class GenerateSObjectTypings extends SfdxCommand {
 		const commandName = await this.ux.prompt(
 			messages.getMessage("prompt_commandName")
 		);
-		const config = await readConfig(this.config.configDir);
+		const config = await readConfig();
 		config[commandName] = undefined;
-		return writeConfig(this.config.configDir, config);
+		return writeConfig(config);
 	}
 }

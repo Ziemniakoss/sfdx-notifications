@@ -35,12 +35,12 @@ export default class GenerateSObjectTypings extends SfdxCommand {
 			required: false,
 		});
 
-		const notificationsConfig = await readConfig(this.config.configDir);
+		const notificationsConfig = await readConfig();
 		notificationsConfig[commandName] = {
 			title,
 			message,
 			icon,
 		};
-		return writeConfig(this.config.configDir, notificationsConfig);
+		return writeConfig(notificationsConfig);
 	}
 }

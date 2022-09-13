@@ -13,7 +13,7 @@ export default class GenerateSObjectTypings extends SfdxCommand {
 	public static description = messages.getMessage("description");
 
 	public async run(): Promise<unknown> {
-		const config = await readConfig(this.config.configDir);
+		const config = await readConfig();
 		const configAsList = [];
 		for (const commandName of Object.keys(config).sort()) {
 			configAsList.push({
