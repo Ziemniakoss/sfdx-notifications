@@ -8,7 +8,7 @@ const messages = Messages.loadMessages("sfdx-notifications", "default_values");
 
 async function hook(options) {
 	const commandName = options.Command.id;
-	const config = await readConfig(this.config.configDir);
+	const config = await readConfig();
 	const commandNotificationConfig = config[commandName];
 	if (commandNotificationConfig == null) {
 		return;

@@ -28,7 +28,8 @@
 		"/lib",
 		"/messages",
 		"/npm-shrinkwrap.json",
-		"/oclif.manifest.json"
+		"/oclif.manifest.json",
+		"/notification_icons"
 	],
 	"homepage": "https://github.com/Ziemniakoss/sfdx-notifications",
 	"keywords": [
@@ -43,11 +44,15 @@
 		"topics": {
 			"notifications": {
 				"description": "Manage sfdx notifications"
+			},
+			"notifications:predefined": {
+				"description": "Manage predefined notifications"
 			}
 		},
 		"hooks": {
 			"postrun": "./lib/hooks/postrun.js",
-			"notification": "./lib/hooks/notification.js"
+			"notification": "./lib/hooks/notification.js",
+			"postdeploy": "./lib/hooks/postdeploy.js"
 		},
 		"devPlugins": [
 			"@oclif/plugin-help"
